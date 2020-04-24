@@ -354,6 +354,8 @@ export class S3FileSystem extends vscrw_fs.FileSystemBase {
             endpoint = undefined;
         }
 
+        let s3ForcePathStyle = vscrw.isTrue(PARAMS['s3ForcePathStyle']);
+
         let api = vscode_helpers.toStringSafe( PARAMS['api'] ).trim();
         if ('' === api) {
             api = undefined;
@@ -381,6 +383,7 @@ export class S3FileSystem extends vscrw_fs.FileSystemBase {
                 logger: logger,
                 credentials: new credentialClass(credentialConfig),
                 endpoint: endpoint,
+                s3ForcePathStyle: s3ForcePathStyle,
                 params: {
                     Bucket: this.getBucket( uri ),
                     ACL: this.getDefaultAcl(),

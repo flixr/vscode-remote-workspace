@@ -364,7 +364,8 @@ Default value: `shared`
 | `api` | A string in `YYYY-MM-DD` format that represents the latest possible API version that can be used in this service. Specify `latest` to use the latest possible version. | `api=latest` | 
 | `acl` | The [ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html) for new or updated files to use. Default: `private` | `acl=public-read` | 
 | `debug` | Set to `1`, to debug a connection, by writing all messages to [log files](#logs-). Default: `0` | `debug=1` |
-| `endpoint` | The endpoint URI to send requests to. The default endpoint is built from the configured region. The endpoint should be a string like `https://{service}.{region}.amazonaws.com`. | `endpoint=https%3A%2F%2Ffoo.bar.amazonaws.com` | 
+| `endpoint` | The endpoint URI to send requests to. The default endpoint is built from the configured region. The endpoint should be a string like `https://{service}.{region}.amazonaws.com`. | `endpoint=https%3A%2F%2Ffoo.bar.amazonaws.com` |
+| `s3ForcePathStyle` | Set to `1`, to force path style URLs for S3 objects. Default: `0` | `s3ForcePathStyle=1` |
 | `file` | If credential type is set to `file`, this defines the path to the `.json` file, which should be used. Relative paths will be mapped to the `.aws` sub folder inside the user's home directory. | `file=aws.json` |
 | `params` | The name of an external file, which contains other parameters for the URI. s. [Import parameters](#import-parameters-) | `params=s3_uri_params.json` | 
 | `profile` | If credential type is set to `shared`, this defines the name of the section inside the `.ini` file, which should be used. Default: `default` | `profile=mkloubert` |
